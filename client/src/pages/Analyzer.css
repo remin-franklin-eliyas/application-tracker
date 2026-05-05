@@ -1,0 +1,109 @@
+.analyzer { display: flex; flex-direction: column; gap: 24px; }
+
+.analyzer-header h1 { font-size: 28px; }
+.analyzer-sub { font-size: 14px; color: var(--text-dim); margin-top: 4px; }
+
+.analyzer-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.analyzer-textareas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 720px) {
+  .analyzer-textareas { grid-template-columns: 1fr; }
+}
+
+.big-textarea { min-height: 260px !important; }
+
+/* Result */
+.analyzer-result {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.score-circle {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 4px solid var(--score-color, var(--red));
+  background: rgba(255,255,255,0.03);
+  flex-shrink: 0;
+  box-shadow: 0 0 24px color-mix(in srgb, var(--score-color, var(--red)) 30%, transparent);
+}
+
+.score-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--score-color, var(--red));
+  line-height: 1;
+}
+
+.score-pct {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--score-color, var(--red));
+  margin-left: 2px;
+}
+
+.score-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.result-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 720px) {
+  .result-cols { grid-template-columns: 1fr; }
+}
+
+.result-col-title {
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.result-col ul {
+  padding-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.result-col li {
+  font-size: 13.5px;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
